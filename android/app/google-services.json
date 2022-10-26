@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "62007880118",
+    "project_id": "khadamaty-364b1",
+    "storage_bucket": "khadamaty-364b1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:62007880118:android:029cea40a3faf42b9c7917",
+        "android_client_info": {
+          "package_name": "com.example.khadamaty_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "62007880118-o6u3ujko5qnij39t243mi6eflpg5gh0b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAA-fqqPAKJx-dfXSkN1L-OGtKtqCHsCEU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "62007880118-o6u3ujko5qnij39t243mi6eflpg5gh0b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,32 +1,39 @@
-//
-// import 'package:shared_preferences/shared_preferences.dart';
-//
-// enum PrefKeys { showBoardScreen , }
-//
-// class SharedPrefController {
-//   SharedPrefController._();
-//   late SharedPreferences _sharedPreferences;
-//   static SharedPrefController? _instance;
-//   factory SharedPrefController() {
-//     return _instance ??= SharedPrefController._();
-//   }
-//
-//   Future<void> initPref() async {
-//     _sharedPreferences = await SharedPreferences.getInstance();
-//   }
-//
-//   Future<bool> saveBool(String key , bool value) async {
-//     return await _sharedPreferences.setBool(key, value);
-//   }
-//
-//   T? getValueFor<T>(String key) {
-//     if (_sharedPreferences.containsKey(key)) {
-//       return _sharedPreferences.get(key) as T?;
-//     }
-//     return null;
-//   }
-//
-//   void clear() async {
-//     _sharedPreferences.clear();
-//   }
-// }
+import 'package:shared_preferences/shared_preferences.dart';
+
+enum PrefKeys {
+  uId,
+
+}
+
+class SharedPrefController {
+  SharedPrefController._();
+
+  late SharedPreferences _sharedPreferences;
+  static SharedPrefController? _instance;
+
+  factory SharedPrefController() {
+    return _instance ??= SharedPrefController._();
+  }
+
+  Future<void> initPref() async {
+    _sharedPreferences = await SharedPreferences.getInstance();
+  }
+
+  Future<bool> saveBool(String key, bool value) async {
+    return await _sharedPreferences.setBool(key, value);
+  }
+  Future<bool> saveString(String key, String value) async {
+    return await _sharedPreferences.setString(key, value);
+  }
+
+  T? getValueFor<T>(String key) {
+    if (_sharedPreferences.containsKey(key)) {
+      return _sharedPreferences.get(key) as T?;
+    }
+    return null;
+  }
+
+  void clear() async {
+    _sharedPreferences.clear();
+  }
+}

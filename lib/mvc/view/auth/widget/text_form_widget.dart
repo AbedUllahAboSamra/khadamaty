@@ -29,7 +29,7 @@ class TextFormWidget extends StatefulWidget {
 }
 
 class _TextFormWidgetState extends State<TextFormWidget> {
-  var obscure = false;
+  var obscure = true;
   var counter = 0;
 
   @override
@@ -64,7 +64,7 @@ class _TextFormWidgetState extends State<TextFormWidget> {
               borderSide: const BorderSide(color: Colors.black, width: 2),
             ),
 
-            suffix: widget.isPassword && counter != 0
+            suffixIcon: widget.isPassword && counter != 0
                 ? InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
